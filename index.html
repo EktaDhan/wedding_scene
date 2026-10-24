@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="theme-color" content="#f3ece1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%8D%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="description" content="You are warmly invited to the wedding of Rohit Dhan &amp; Tanvi Swarup, 26–27 November 2026, Bhopal.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ektadhan.github.io/wedding_scene/">
@@ -11,12 +17,12 @@
 <title>Rohit & Tanvi – Wedding Invitation</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f3ece1;--ink:#6b1f2a;--gold:#b8923f;--card:#fffaf0;--muted:#6f5a4a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17110f}}
-:root[data-theme="dark"]{--bg:#17110f}
+:root{--bg:#f3ece1;--hd:#6b1f2a;--ink:#6b1f2a;--gold:#b8923f;--card:#fffaf0;--muted:#6f5a4a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17110f;--hd:#f0dcc0}}
+:root[data-theme="dark"]{--bg:#17110f;--hd:#f0dcc0}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);font-family:'Cormorant Garamond',Georgia,serif;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:28px;padding:24px 16px 40px}
+body{margin:0;background:var(--bg);font-family:'Cormorant Garamond',Georgia,serif;color:var(--muted);display:flex;flex-flow:row wrap;justify-content:center;align-items:stretch;gap:28px;padding:32px 16px 48px;max-width:1240px;margin:0 auto}
 .card{position:relative;overflow:hidden;width:100%;max-width:360px;min-height:560px;background:var(--card);border-radius:140px 140px 24px 24px / 70px 70px 24px 24px;border:2px solid var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:52px 30px;gap:6px;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:17px;line-height:1.35}
 .card>*{position:relative;z-index:1}
 .card>.corner{position:absolute;z-index:0;width:130px;height:130px;pointer-events:none}
@@ -31,6 +37,9 @@ body{margin:0;background:var(--bg);font-family:'Cormorant Garamond',Georgia,seri
 b{color:var(--ink)}
 .tag{font-style:italic;color:var(--ink)}
 .sm{font-size:14px}
+body{counter-reset:n}.card{counter-increment:n}
+.card::after{content:"— " counter(n) " —";position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-size:12px;letter-spacing:.2em;color:var(--gold);font-weight:600}
+.hd{flex:0 0 100%;text-align:center;color:var(--hd);padding:4px 0 6px}.hd .script{color:var(--hd);font-size:46px}.hd p{margin:4px 0 0;font-size:15px;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
 .row{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;padding:7px 0;border-bottom:1px dotted var(--gold);text-align:left}
 .mini{margin:0;padding:5px 11px;font-size:12px;white-space:nowrap}
 .wa{background:#e6f6ea;border-color:#2e9e55}
@@ -49,6 +58,7 @@ b{color:var(--ink)}
 <g id="church"><rect x="-32" y="0" width="64" height="45" fill="#fff" stroke="#d9cbb0"/><rect x="-10" y="-30" width="20" height="30" fill="#fff" stroke="#d9cbb0"/><path d="M-13-30L0-62 13-30Z" fill="#5a6f8a"/><path d="M0-62V-74M-5-69H5" stroke="#b8923f" stroke-width="2"/><path d="M-7 45V28a7 7 0 0114 0V45Z" fill="#c98b4b"/><rect x="-26" y="12" width="9" height="14" rx="4" fill="#9db7d6"/><rect x="17" y="12" width="9" height="14" rx="4" fill="#9db7d6"/><rect x="-3" y="-22" width="6" height="10" rx="3" fill="#9db7d6"/></g>
 <g id="couple"><rect x="-40" y="-40" width="30" height="95" rx="10" fill="#1f2a44"/><circle cx="-25" cy="-52" r="10" fill="#3a2a22"/><path d="M8-38H34L62 62H-6Z" fill="#fff0f0" stroke="#eadcdc"/><circle cx="21" cy="-50" r="10" fill="#4a2c1f"/><path d="M14-42q-6 40 2 90M28-42q8 40 4 90" stroke="#f3dede" fill="none" stroke-width="5" opacity=".8"/></g>
 </defs></svg>
+<header class="hd"><div class="script">Rohit &amp; Tanvi</div><p>Wedding Invitation</p></header>
 
 <div class="card">
 <svg class="corner tl" viewBox="0 0 130 130"><use href="#flor" transform="translate(6 6) scale(1.1)"/></svg>
