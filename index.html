@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>document.documentElement.className+=' js lock'</script>
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -37,6 +38,38 @@ body{margin:0;background:var(--bg);font-family:'Cormorant Garamond',Georgia,seri
 b{color:var(--ink)}
 .tag{font-style:italic;color:var(--ink)}
 .sm{font-size:14px}
+html.lock,html.lock body{overflow:hidden}
+.intro{display:none;position:fixed;inset:0;z-index:50;flex-direction:column;align-items:center;justify-content:center;gap:54px;background:radial-gradient(circle at 50% 40%,#fffaf0,var(--bg) 78%);color:var(--hd);text-align:center;padding:24px;cursor:pointer;border:0;width:100%;font-family:inherit;transition:opacity 1s ease;overflow:hidden}
+.js .intro{display:flex}
+.intro.gone{opacity:0;pointer-events:none}
+.intro .cap{color:var(--gold);transition:opacity .5s}
+.intro .hint{font-size:15px;letter-spacing:.2em;text-transform:uppercase;animation:pulse 2s ease-in-out infinite;transition:opacity .4s}
+.intro.open .cap,.intro.open .hint{opacity:0;animation:none}
+@keyframes pulse{50%{opacity:.4}}
+.ic{position:absolute;width:150px;height:150px;pointer-events:none}.ic.tl{top:0;left:0}.ic.br{bottom:0;right:0;transform:rotate(180deg)}.ic.tr{top:0;right:0;transform:scaleX(-1)}.ic.bl{bottom:0;left:0;transform:scaleY(-1)}
+.env{position:relative;width:270px;height:180px;perspective:700px;animation:enter .9s ease both,float 3.6s ease-in-out .9s infinite}
+.intro.open .env{animation:none}
+.env .back{position:absolute;inset:0;background:#ecd9b5;border:2px solid var(--gold);border-radius:8px}
+.env .letter{position:absolute;left:18px;right:18px;top:10px;height:150px;background:#fffaf0;border:1.5px solid var(--gold);border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:#6b1f2a;z-index:1;font-style:italic;font-weight:700;font-size:25px;line-height:1.1;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.env .letter small{font-style:normal;font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#a37e2c}
+.env .front{position:absolute;inset:0;z-index:2;background:#f1dfbc;clip-path:polygon(0 0,50% 62%,100% 0,100% 100%,0 100%);border-radius:0 0 8px 8px}
+.env .flap{position:absolute;left:0;right:0;top:0;height:112px;z-index:3;background:#f8ecd3;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .9s ease .3s,opacity .3s ease 1s,z-index 0s .7s;border-top:2px solid var(--gold)}
+.env .seal{position:absolute;left:50%;top:80px;width:44px;height:44px;margin-left:-22px;border-radius:50%;background:#8c2a38;color:#f6dca0;display:flex;align-items:center;justify-content:center;font-size:20px;z-index:4;box-shadow:0 2px 6px rgba(0,0,0,.35);animation:glow 2s ease-in-out infinite;transition:transform .35s ease,opacity .3s ease .15s}
+.env .to{position:absolute;left:0;right:0;bottom:11px;z-index:2;font-style:italic;font-size:19px;color:#6b1f2a}
+.env .to small{display:block;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#a37e2c;font-style:normal;margin-bottom:2px}
+.intro.open .flap{transform:rotateX(180deg);opacity:0;z-index:0}
+.intro.open .seal{transform:scale(1.6);opacity:0;animation:none}
+.intro.open .letter{animation:letterOut 3.2s ease-in-out forwards}
+.intro.open .back,.intro.open .front,.intro.open .to{animation:partOut 3.2s ease-in-out forwards}
+.sp{position:absolute;left:50%;top:102px;color:#d4a937;font-size:16px;pointer-events:none;z-index:6;opacity:0;animation:spark 1.1s ease-out forwards}
+@keyframes enter{from{opacity:0;transform:translateY(40px)}}
+@keyframes float{50%{transform:translateY(-7px)}}
+@keyframes glow{50%{box-shadow:0 0 0 8px rgba(140,42,56,.2),0 2px 6px rgba(0,0,0,.35)}}
+@keyframes spark{0%{opacity:1;transform:translate(-50%,-50%) scale(.3)}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.2)}}
+@keyframes partOut{0%,45%{opacity:1;transform:none}100%{opacity:0;transform:translateY(80px)}}
+@keyframes letterOut{0%,18%{transform:none;z-index:1}19%{z-index:6}52%{transform:translateY(-120px);opacity:1}100%{transform:translateY(-120px) scale(3.4);opacity:0;z-index:6}}
+@media (prefers-reduced-motion:reduce){.intro{transition:none}.env,.intro .hint,.env .seal{animation:none}.env .flap{transition:none}}
+
 body{counter-reset:n}.card{counter-increment:n}
 .card::after{content:"— " counter(n) " —";position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-size:12px;letter-spacing:.2em;color:var(--gold);font-weight:600}
 .hd{flex:0 0 100%;text-align:center;color:var(--hd);padding:4px 0 6px}.hd .script{color:var(--hd);font-size:46px}.hd p{margin:4px 0 0;font-size:15px;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
@@ -44,7 +77,7 @@ body{counter-reset:n}.card{counter-increment:n}
 .mini{margin:0;padding:5px 11px;font-size:12px;white-space:nowrap}
 .wa{background:#e6f6ea;border-color:#2e9e55}
 .btn{display:inline-block;margin-top:8px;padding:8px 16px;border:1.5px solid var(--gold);border-radius:999px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;background:rgba(255,255,255,.6)}
-.cd{display:flex;gap:10px;margin:10px 0}.cd div{width:64px;padding:10px 0;border:1.5px solid var(--gold);border-radius:12px;background:#fff;color:var(--ink);font-size:12px;letter-spacing:.1em;text-transform:uppercase}.cd b{display:block;font-size:28px;letter-spacing:0}
+.cd{display:flex;gap:10px;margin:10px 0}.cd div{width:60px;padding:10px 0;border:1.5px solid var(--gold);border-radius:12px;background:#fff;color:var(--ink);font-size:12px;letter-spacing:.1em;text-transform:uppercase}.cd b{display:block;font-size:28px;letter-spacing:0}
 .petal{position:fixed;top:-20px;width:10px;height:14px;background:#f6b8c4;border-radius:70% 0 70% 0;opacity:.7;pointer-events:none;z-index:5;animation:fall linear infinite}
 @keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
 .card{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}.card.in{opacity:1;transform:none}
@@ -59,6 +92,12 @@ body{counter-reset:n}.card{counter-increment:n}
 <g id="couple"><rect x="-40" y="-40" width="30" height="95" rx="10" fill="#1f2a44"/><circle cx="-25" cy="-52" r="10" fill="#3a2a22"/><path d="M8-38H34L62 62H-6Z" fill="#fff0f0" stroke="#eadcdc"/><circle cx="21" cy="-50" r="10" fill="#4a2c1f"/><path d="M14-42q-6 40 2 90M28-42q8 40 4 90" stroke="#f3dede" fill="none" stroke-width="5" opacity=".8"/></g>
 </defs></svg>
 <header class="hd"><div class="script">Rohit &amp; Tanvi</div><p>Wedding Invitation</p></header>
+<button class="intro" id="intro" type="button" aria-label="Open the invitation">
+<svg class="ic tl" viewBox="0 0 130 130"><use href="#flor" transform="translate(6 6) scale(1.1)"/></svg><svg class="ic tr" viewBox="0 0 130 130"><use href="#flor" transform="translate(6 6) scale(1.1)"/></svg><svg class="ic bl" viewBox="0 0 130 130"><use href="#flor" transform="translate(6 6) scale(1.1)"/></svg><svg class="ic br" viewBox="0 0 130 130"><use href="#flor" transform="translate(6 6) scale(1.1)"/></svg>
+<div class="cap">You are invited</div>
+<div class="env"><div class="back"></div><div class="letter"><small>✝</small><span>Rohit</span><span style="color:#b8923f;font-size:19px">&amp;</span><span>Tanvi</span><small style="margin-top:6px">26 – 27 Nov 2026</small></div><div class="front"></div><div class="to"><small>Invitation for</small><span id="ito">Our dear guests</span></div><div class="flap"></div><div class="seal">♥</div></div>
+<div class="hint">Tap to open</div>
+</button>
 
 <div class="card">
 <svg class="corner tl" viewBox="0 0 130 130"><use href="#flor" transform="translate(6 6) scale(1.1)"/></svg>
@@ -112,7 +151,7 @@ body{counter-reset:n}.card{counter-increment:n}
 </div>
 
 <div class="card">
-<div class="cap">Counting down to</div><div class="script big">Our Big Day</div><div class="sm">Madwa · 26 November 2026, 8:00 AM</div><div class="cd"><div><b id="d">–</b>Days</div><div><b id="h">–</b>Hrs</div><div><b id="m">–</b>Min</div></div><div class="tag sm">Every moment brings us closer ♥</div>
+<div class="cap" id="cdcap">Counting down to</div><div class="script big" id="cdtitle">Our Big Day</div><div class="sm" id="cdsub">Madwa · 26 November 2026, 8:00 AM</div><div class="cd" id="cdrow"><div><b id="d">–</b>Days</div><div><b id="h">–</b>Hrs</div><div><b id="m">–</b>Min</div><div><b id="sec">–</b>Sec</div></div><div class="tag sm" id="cdfoot">Every moment brings us closer ♥</div>
 </div>
 
 <div class="card">
@@ -129,11 +168,52 @@ var msg=(to?'We, '+to+', ':'We ')+"would love to attend Rohit & Tanvi's wedding.
 var r=document.getElementById('rsvp');if(r)r.href='https://wa.me/'+RSVP_NUMBER+'?text='+encodeURIComponent(msg);
 var sh=document.getElementById('share');if(sh)sh.addEventListener('click',function(){var url=location.origin+location.pathname,text="You're invited to Rohit & Tanvi's wedding, 26\u201327 November 2026, Bhopal.";if(navigator.share){navigator.share({title:document.title,text:text,url:url}).catch(function(){})}else{window.open('https://wa.me/?text='+encodeURIComponent(text+' '+url),'_blank')}});
 var t=new Date('2026-11-26T08:00:00+05:30').getTime();
-function tick(){var s=Math.max(0,t-Date.now())/1000;var set=function(i,v){var e=document.getElementById(i);if(e)e.textContent=v};set('d',Math.floor(s/86400));set('h',Math.floor(s%86400/3600));set('m',Math.floor(s%3600/60))}
-tick();setInterval(tick,30000);
+var t2=new Date('2026-11-28T00:00:00+05:30').getTime();
+var $=function(i){return document.getElementById(i)};
+var pad=function(n){return n<10?'0'+n:''+n};
+function tick(){
+ var now=Date.now(),s=Math.max(0,t-now)/1000;
+ if(now<t){
+  $('cdrow').style.display='flex';
+  $('d').textContent=Math.floor(s/86400);$('h').textContent=pad(Math.floor(s%86400/3600));$('m').textContent=pad(Math.floor(s%3600/60));$('sec').textContent=pad(Math.floor(s%60));
+ }else if(now<t2){
+  $('cdcap').textContent='The wait is over';$('cdtitle').textContent='Today is the day! 🎉';$('cdsub').textContent='The celebrations have begun';$('cdrow').style.display='none';$('cdfoot').textContent='We’re so happy to celebrate with you ♥';
+ }else{
+  $('cdcap').textContent='With gratitude';$('cdtitle').textContent='Thank you';$('cdsub').textContent='for celebrating with us';$('cdrow').style.display='none';$('cdfoot').textContent='♥';
+ }
+}
+tick();setInterval(tick,1000);
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.15});
 document.querySelectorAll('.card').forEach(function(c){io.observe(c)});
 if(!matchMedia('(prefers-reduced-motion:reduce)').matches){for(var i=0;i<12;i++){var p=document.createElement('span');p.className='petal';p.style.left=Math.random()*100+'vw';p.style.animationDuration=(9+Math.random()*8)+'s';p.style.animationDelay=(-Math.random()*12)+'s';document.body.appendChild(p)}}
+})();
+</script>
+<script>
+(function(){
+var el=document.getElementById('intro'),root=document.documentElement,done=false;
+if(!el)return;
+var q=new URLSearchParams(location.search),to=(q.get('to')||'').trim().slice(0,60),n=document.getElementById('ito');
+if(n&&to)n.textContent=to;
+function finish(){root.classList.remove('lock');el.style.display='none'}
+function sparkle(){
+ var env=el.querySelector('.env');
+ for(var i=0;i<20;i++){
+  var a=i/20*6.283+Math.random()*.3,d=70+Math.random()*90,sp=document.createElement('span');
+  sp.className='sp';sp.textContent='✦';
+  sp.style.setProperty('--dx',Math.cos(a)*d+'px');sp.style.setProperty('--dy',Math.sin(a)*d+'px');
+  sp.style.animationDelay=(Math.random()*.15)+'s';sp.style.fontSize=(10+Math.random()*10)+'px';
+  env.appendChild(sp);
+ }
+}
+function open(){
+ if(done)return;done=true;
+ if(matchMedia('(prefers-reduced-motion:reduce)').matches){finish();return}
+ el.classList.add('open');sparkle();
+ setTimeout(function(){el.classList.add('gone')},2300);
+ setTimeout(finish,3500);
+}
+el.addEventListener('click',open);
+setTimeout(open,90000);
 })();
 </script>
 </body></html>
