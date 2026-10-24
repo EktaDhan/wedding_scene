@@ -31,6 +31,9 @@ body{margin:0;background:var(--bg);font-family:'Cormorant Garamond',Georgia,seri
 b{color:var(--ink)}
 .tag{font-style:italic;color:var(--ink)}
 .sm{font-size:14px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;padding:7px 0;border-bottom:1px dotted var(--gold);text-align:left}
+.mini{margin:0;padding:5px 11px;font-size:12px;white-space:nowrap}
+.wa{background:#e6f6ea;border-color:#2e9e55}
 .btn{display:inline-block;margin-top:8px;padding:8px 16px;border:1.5px solid var(--gold);border-radius:999px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;background:rgba(255,255,255,.6)}
 .cd{display:flex;gap:10px;margin:10px 0}.cd div{width:64px;padding:10px 0;border:1.5px solid var(--gold);border-radius:12px;background:#fff;color:var(--ink);font-size:12px;letter-spacing:.1em;text-transform:uppercase}.cd b{display:block;font-size:28px;letter-spacing:0}
 .petal{position:fixed;top:-20px;width:10px;height:14px;background:#f6b8c4;border-radius:70% 0 70% 0;opacity:.7;pointer-events:none;z-index:5;animation:fall linear infinite}
@@ -50,7 +53,7 @@ b{color:var(--ink)}
 <div class="card">
 <svg class="corner tl" viewBox="0 0 130 130"><use href="#flor" transform="translate(6 6) scale(1.1)"/></svg>
 <svg class="corner br" viewBox="0 0 130 130"><use href="#flor" transform="translate(6 6) scale(1.1)"/></svg>
-<div class="orn">✝</div><div class="tag sm">“Therefore what God has joined together, let no one separate” · Matthew 19:6</div><div class="cap">Together with our families</div><div class="sm">We joyfully invite you to celebrate the wedding of</div><div class="script big">Rohit Dhan</div><div class="orn">&amp;</div><div class="script big">Tanvi Swarup</div>
+<div id="greet" class="script" style="font-size:28px;display:none"></div><div class="orn">✝</div><div class="tag sm">“Therefore what God has joined together, let no one separate” · Matthew 19:6</div><div class="cap">Together with our families</div><div class="sm">We joyfully invite you to celebrate the wedding of</div><div class="script big">Rohit Dhan</div><div class="orn">&amp;</div><div class="script big">Tanvi Swarup</div>
 <svg class="art" viewBox="0 0 240 140"><path d="M0 120Q120 100 240 120V140H0Z" fill="#f3d9d9"/><use href="#church" transform="translate(120 70) scale(.55)"/><use href="#couple" transform="translate(112 72) scale(.7)"/><g fill="#f6b8c4"><circle cx="40" cy="128" r="3"/><circle cx="70" cy="132" r="3"/><circle cx="180" cy="130" r="3"/><circle cx="205" cy="126" r="3"/></g></svg>
 </div>
 
@@ -75,6 +78,16 @@ b{color:var(--ink)}
 </div>
 
 <div class="card">
+<div class="cap">Two days of celebration</div><div class="script big">Schedule</div>
+<div class="cap sm" style="margin-top:8px">Thursday · 26 November</div>
+<div class="row"><span><b>Madwa</b> · 8:00 AM</span><a class="btn mini" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Madwa%20%E2%80%93%20Rohit%20%26%20Tanvi&amp;dates=20261126T080000/20261126T090000&amp;ctz=Asia%2FKolkata&amp;location=H.No.%20G-11%2C%20Priyanka%20Nagar%2C%20Kolar%20Road%2C%20Bhopal&amp;details=Wedding%20of%20Rohit%20Dhan%20%26%20Tanvi%20Swarup" target="_blank" rel="noopener">＋ Calendar</a></div>
+<div class="row"><span><b>Haldi</b> · 4:00 PM</span><a class="btn mini" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Haldi%20%E2%80%93%20Rohit%20%26%20Tanvi&amp;dates=20261126T160000/20261126T180000&amp;ctz=Asia%2FKolkata&amp;location=H.No.%20G-11%2C%20Priyanka%20Nagar%2C%20Kolar%20Road%2C%20Bhopal&amp;details=Wedding%20of%20Rohit%20Dhan%20%26%20Tanvi%20Swarup" target="_blank" rel="noopener">＋ Calendar</a></div>
+<div class="cap sm" style="margin-top:8px">Friday · 27 November</div>
+<div class="row"><span><b>Holy Matrimony</b></span><a class="btn mini" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Holy%20Matrimony%20%E2%80%93%20Rohit%20%26%20Tanvi&amp;dates=20261127/20261128&amp;ctz=Asia%2FKolkata&amp;location=Queen%20of%20the%20Universe%20Church%2C%20Gehun%20Kheda%2C%20Kolar%20Road%2C%20Bhopal&amp;details=Wedding%20of%20Rohit%20Dhan%20%26%20Tanvi%20Swarup" target="_blank" rel="noopener">＋ Calendar</a></div>
+<div class="row"><span><b>Reception</b> · 7:30 PM</span><a class="btn mini" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Wedding%20Reception%20%E2%80%93%20Rohit%20%26%20Tanvi&amp;dates=20261127T193000/20261127T223000&amp;ctz=Asia%2FKolkata&amp;location=Aarambh%20Marriage%20Garden%2C%20Chichli%20Bairagarh%2C%20Kolar%20Road%2C%20Bhopal&amp;details=Wedding%20of%20Rohit%20Dhan%20%26%20Tanvi%20Swarup" target="_blank" rel="noopener">＋ Calendar</a></div>
+</div>
+
+<div class="card">
 <svg class="corner tl" viewBox="0 0 130 130"><use href="#flor" transform="translate(6 6) scale(1.1)"/></svg>
 <svg class="corner br" viewBox="0 0 130 130"><use href="#flor" transform="translate(6 6) scale(1.1)"/></svg>
 <div class="sm">Mr. Sanjay Dhan &amp; Mrs. Pyari Dhan solicit your gracious presence and blessing on the wedding ceremony of their beloved son</div><div class="script">Rohit Dhan</div><div class="sm">Grand S/o Late Yudhisthir Dhan &amp; Mrs. Dahri Dhan</div><div class="cap">Weds</div><div class="script">Tanvi Swarup</div><div class="sm">D/o Late Ameeta Swarup &amp; Late Dr. Manjal Rai Swarup<br>B-Block, Sarita Vihar, New Delhi</div>
@@ -83,7 +96,7 @@ b{color:var(--ink)}
 <div class="card">
 <svg class="corner bl" viewBox="0 0 130 130"><use href="#flor" transform="translate(6 6) scale(1.1)"/></svg>
 <svg class="corner br" viewBox="0 0 130 130" style="transform:rotate(180deg) scaleX(-1)"><use href="#flor" transform="translate(6 6) scale(1.1)"/></svg>
-<div class="sm">With Best Compliments From:<br><b>All Relatives &amp; Friends</b></div><div class="cap">R.S.V.P.</div><div>Mr. Sanjay Dhan, Mrs. Pyari Dhan<br>Ms. Ekta Dhan</div>
+<div class="sm">With Best Compliments From:<br><b>All Relatives &amp; Friends</b></div><div class="cap">R.S.V.P.</div><div>Mr. Sanjay Dhan, Mrs. Pyari Dhan<br>Ms. Ekta Dhan</div><a id="rsvp" class="btn wa" href="https://wa.me/" target="_blank" rel="noopener">💬 Confirm on WhatsApp</a>
 <svg class="art" viewBox="0 0 240 130"><rect width="240" height="130" fill="#fde7cf"/><circle cx="190" cy="34" r="16" fill="#fbd38d"/><path d="M0 80Q120 66 240 80V130H0Z" fill="#9ec5a0"/><path d="M0 100Q120 90 240 100V130H0Z" fill="#a9cfe0"/><use href="#church" transform="translate(120 58) scale(.55)"/><g fill="#5f8a4b"><circle cx="40" cy="68" r="14"/><circle cx="200" cy="70" r="12"/></g></svg>
 <div class="tag sm">“Your presence will make our celebration even more special”</div>
 </div>
@@ -95,10 +108,16 @@ b{color:var(--ink)}
 <div class="card">
 <div class="cap">Two families · One blessing</div><div class="script big">A lifetime of Love</div>
 <svg class="art" viewBox="0 0 240 190"><path d="M120 190L105 90M120 190L135 90M120 190L120 80" stroke="#5f8a4b" stroke-width="5"/><use href="#leaf" transform="translate(120 110) rotate(-150) scale(1.2)"/><use href="#leaf" transform="translate(120 110) rotate(-30) scale(1.2)"/><use href="#rose" transform="translate(120 56) scale(1.2)"/><use href="#rose" transform="translate(84 76) scale(1)"/><use href="#rose" transform="translate(156 76) scale(1)"/><use href="#rose" transform="translate(100 98) scale(.8)"/><use href="#rose" transform="translate(142 98) scale(.8)"/><path d="M120 150q-40-14-52 6 28 6 52-6zM120 150q40-14 52 6-28 6-52-6z" fill="#e9c9a8" stroke="#b8923f"/><rect x="108" y="146" width="24" height="12" rx="4" fill="#e9c9a8" stroke="#b8923f"/></svg>
-<div class="script">See you there ♥</div>
+<div class="script">See you there ♥</div><button id="share" class="btn" type="button" style="cursor:pointer;font-family:inherit">↗ Share this invitation</button>
 </div>
 <script>
 (function(){
+var RSVP_NUMBER=''; // optional: country code + number, no + or spaces, e.g. '919876543210'
+var q=new URLSearchParams(location.search),to=(q.get('to')||'').trim().slice(0,60);
+var g=document.getElementById('greet');if(g&&to){g.textContent='Dear '+to;g.style.display='block'}
+var msg=(to?'We, '+to+', ':'We ')+"would love to attend Rohit & Tanvi's wedding. Confirming our presence \uD83D\uDE4F";
+var r=document.getElementById('rsvp');if(r)r.href='https://wa.me/'+RSVP_NUMBER+'?text='+encodeURIComponent(msg);
+var sh=document.getElementById('share');if(sh)sh.addEventListener('click',function(){var url=location.origin+location.pathname,text="You're invited to Rohit & Tanvi's wedding, 26\u201327 November 2026, Bhopal.";if(navigator.share){navigator.share({title:document.title,text:text,url:url}).catch(function(){})}else{window.open('https://wa.me/?text='+encodeURIComponent(text+' '+url),'_blank')}});
 var t=new Date('2026-11-26T08:00:00+05:30').getTime();
 function tick(){var s=Math.max(0,t-Date.now())/1000;var set=function(i,v){var e=document.getElementById(i);if(e)e.textContent=v};set('d',Math.floor(s/86400));set('h',Math.floor(s%86400/3600));set('m',Math.floor(s%3600/60))}
 tick();setInterval(tick,30000);
